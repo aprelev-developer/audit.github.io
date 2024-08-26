@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет эксперта</title>
+    <link rel="stylesheet" href="../../style/css/expert/expert.css">
+</head>
+<body>
+<header>
+    <h1>Личный кабинет эксперта</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#profile" class="nav-link">Профиль</a></li>
+        <li><a href="#organizations" class="nav-link">Учебные организации</a></li>
+        <li><a href="#audit" class="nav-link">Проверка аудитов</a></li>
+    </ul>
+</nav>
+
+<main>
+    <!-- Профиль эксперта -->
+    <section id="profile">
+        <div class="profile">
+            <h2>Профиль</h2>
+            <p>Имя: Иван Иванов</p>
+            <p>Email: ivanov@example.com</p>
+        </div>
+    </section>
+
+    <!-- Учебные организации -->
+    <section id="organizations">
+        <div class="organization">
+            <h2>Учебные организации</h2>
+            <ul>
+                <li>Организация 1</li>
+                <li>Организация 2</li>
+                <li>Организация 3</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Проверка аудитов -->
+    <section id="audit">
+        <div class="audit">
+            <h2>Проверка аудитов</h2>
+            <p id="notification" style="display:none; color: red;">Учебная организация оповещена о необходимости заполнения формы.</p>
+            <button id="add-form-btn">Добавить форму аудита</button>
+            <table id="audit-table">
+                <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>Статус выполнения (%)</th>
+                    <th>Действия</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="form-name">Форма аудита 1</td>
+                    <td><input type="number" class="status-input" value="50" min="0" max="100">%</td>
+                    <td><button class="delete-form-btn">Удалить</button></td>
+                </tr>
+                <tr>
+                    <td class="form-name">Форма аудита 2</td>
+                    <td><input type="number" class="status-input" value="80" min="0" max="100">%</td>
+                    <td><button class="delete-form-btn">Удалить</button></td>
+                </tr>
+                <tr>
+                    <td class="form-name">Форма аудита 3</td>
+                    <td><input type="number" class="status-input" value="100" min="0" max="100" disabled>%</td>
+                    <td><button class="delete-form-btn">Удалить</button></td>
+                </tr>
+                </tbody>
+            </table>
+            <button id="submit-status">Обновить статусы</button>
+        </div>
+    </section>
+
+    <!-- Детальная страница заполнения формы аудита -->
+    <section id="form-details" style="display:none;">
+        <h2>Детали формы аудита</h2>
+        <p id="form-name-title"></p>
+        <form id="audit-details-form">
+            <label for="field1">Поле 1:</label>
+            <input type="text" id="field1" name="field1" placeholder="Введите данные для поля 1">
+
+            <label for="field2">Поле 2:</label>
+            <input type="text" id="field2" name="field2" placeholder="Введите данные для поля 2">
+
+            <label for="field3">Поле 3:</label>
+            <input type="text" id="field3" name="field3" placeholder="Введите данные для поля 3">
+
+            <button type="button" id="save-form-details">Сохранить</button>
+            <button type="button" id="back-to-audit">Вернуться к списку аудитов</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Личный кабинет эксперта</p>
+</footer>
+
+<script src="../../style/js/expert/expert.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="../../../style/css/client/user_profile/user_profile.css">
+</head>
+<body>
+<div class="user-profile">
+    <h2>Личный кабинет</h2>
+    <p><strong>Фамилия:</strong> <span id="surname">Иванов</span></p>
+    <p><strong>Имя:</strong> <span id="name">Иван</span></p>
+    <div class="user-data">
+        <div>
+            <label>Электронная почта:</label>
+            <span id="email">ivanov@example.com</span>
+        </div>
+        <div>
+            <label>Номер телефона:</label>
+            <span id="phone">+7 900 000 00 00</span>
+        </div>
+    </div>
+    <div class="test-status">
+        <h3>Статус аудитов</h3>
+        <button onclick="toggleTestList()">Просмотреть аудиты</button>
+    </div>
+    <div id="test-list" class="test-list">
+        <div class="test-item">
+            <h4>Аудит 1</h4>
+            <p>Статус: Пройдено</p>
+            <a href="#">Перейти к результатам</a>
+        </div>
+        <div class="test-item">
+            <h4>Аудит 2</h4>
+            <p>Статус: Пройдено</p>
+            <a href="#">Тест на проверке</a>
+        </div>
+        <div class="test-item">
+            <h4>Аудит 3</h4>
+            <p>Статус:Не пройдено</p>
+            <a href="../../test/audit.html">Пройти тест</a>
+        </div>
+    </div>
+    <button onclick="editProfile()">Редактировать данные</button>
+</div>
+<!-- Модальное окно для редактирования -->
+<div id="edit-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>Редактирование данных</h3>
+        <label for="edit-surname">Фамилия:</label>
+        <input type="text" id="edit-surname">
+        <label for="edit-name">Имя:</label>
+        <input type="text" id="edit-name">
+        <label for="edit-email">Электронная почта:</label>
+        <input type="email" id="edit-email">
+        <label for="edit-phone">Номер телефона:</label>
+        <input type="text" id="edit-phone">
+        <button onclick="saveChanges()">Сохранить изменения</button>
+    </div>
+</div>
+<script src="../../../style/js/client/user_profile/user_profile.js"></script>
+</body>
+</html>

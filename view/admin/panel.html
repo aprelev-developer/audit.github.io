@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель Администратора</title>
+    <link rel="stylesheet" href="../../style/css/admin/panel.css">
+    <script defer src="../../style/js/admin/panel.js"></script>
+</head>
+
+<body>
+<div class="admin-panel">
+    <h1>Панель Администратора</h1>
+    <div class="tabs">
+        <button class="tab-link" onclick="openTab(event, 'Experts')">Эксперты</button>
+        <button class="tab-link" onclick="openTab(event, 'Organizations')">Организации</button>
+        <button class="tab-link" onclick="openTab(event, 'AccessCodes')">Коды Доступа</button>
+        <button class="tab-link" onclick="openTab(event, 'Reports')">Выгрузка отчетов</button>
+    </div>
+
+    <!-- Эксперты -->
+    <div id="Experts" class="tab-content">
+        <h2>Эксперты</h2>
+        <button onclick="openExpertForm()">Добавить Эксперта</button>
+        <form id="expertForm" style="display: none;">
+            <input type="text" id="expertName" placeholder="Имя эксперта" required>
+            <input type="email" id="expertEmail" placeholder="Email эксперта" required>
+            <input type="text" id="expertOrganization" placeholder="Организация">
+            <button type="button" onclick="saveExpert()">Сохранить</button>
+            <button type="button" onclick="closeExpertForm()">Отмена</button>
+        </form>
+        <table id="expertsTable">
+            <tr>
+                <th>Имя</th>
+                <th>Email</th>
+                <th>Организация</th>
+                <th>Действия</th>
+            </tr>
+            <!-- Данные будут добавлены динамически -->
+        </table>
+    </div>
+
+    <!-- Организации -->
+    <div id="Organizations" class="tab-content">
+        <h2>Организации</h2>
+        <button onclick="openOrganizationForm()">Добавить Организацию</button>
+        <form id="organizationForm" style="display: none;">
+            <input type="text" id="organizationName" placeholder="Название организации" required>
+            <input type="text" id="organizationExpert" placeholder="Эксперт">
+            <button type="button" onclick="saveOrganization()">Сохранить</button>
+            <button type="button" onclick="closeOrganizationForm()">Отмена</button>
+        </form>
+        <table id="organizationsTable">
+            <tr>
+                <th>Название</th>
+                <th>Эксперт</th>
+                <th>Действия</th>
+            </tr>
+            <!-- Данные будут добавлены динамически -->
+        </table>
+    </div>
+
+    <!-- Коды доступа -->
+    <div id="AccessCodes" class="tab-content">
+        <h2>Коды Доступа</h2>
+        <button onclick="generateAccessCode()">Создать Код Доступа</button>
+        <ul id="accessCodesList">
+            <!-- Список кодов будет добавлен динамически -->
+        </ul>
+    </div>
+
+    <!-- Отчеты -->
+    <div id="Reports" class="tab-content">
+        <h2>Выгрузка отчетов</h2>
+        <button onclick="exportData('excel')">Выгрузить в Excel</button>
+        <button onclick="exportData('csv')">Выгрузить в CSV</button>
+        <button onclick="exportData('xml')">Выгрузить в XML</button>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f3f4f6; /* Легкий, нейтральный фон */
+	margin: 0;
+	padding: 0;
+}
+
+.admin-panel {
+	width: 80%;
+	margin: 20px auto;
+	background: #ffffff;
+	padding: 20px;
+	border-radius: 12px;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+	box-sizing: border-box;
+	max-width: 1200px; /* Ограничение максимальной ширины */
+}
+
+.tabs {
+	display: flex;
+	border-bottom: 2px solid #b6c0c8; /* Мягкий акцентный цвет */
+	margin-bottom: 20px;
+	flex-wrap: wrap; /* Перенос вкладок на новую строку на маленьких экранах */
+}
+
+.tab-link {
+	flex: 1;
+	padding: 12px;
+	background: #f7fafc; /* Легкий фон с оттенком */
+	border: 1px solid #b6c0c8;
+	border-bottom: none;
+	text-align: center;
+	cursor: pointer;
+	color: #2c3e50; /* Темный оттенок для текста */
+}
+
+.tab-link.active {
+	background: #ffffff;
+	font-weight: bold;
+	border-bottom: 2px solid #2ecc71; /* Зеленый цвет в мусульманском стиле */
+	color: #2ecc71;
+}
+
+.tab-content {
+	display: none;
+}
+
+.tab-content.active {
+	display: block;
+}
+
+h2 {
+	margin-top: 0;
+	color: #2c3e50;
+}
+
+form {
+	margin-bottom: 20px;
+}
+
+form input,
+form button {
+	padding: 10px;
+	margin-right: 10px;
+	border-radius: 6px;
+	border: 1px solid #b6c0c8;
+}
+
+form input {
+	width: calc(100% - 120px);
+	margin-bottom: 10px;
+	box-sizing: border-box;
+}
+
+form button {
+	background: #2ecc71; /* Основной зеленый цвет */
+	color: white;
+	border: none;
+	cursor: pointer;
+	width: 100px;
+}
+
+form button:hover {
+	background: #27ae60;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 20px;
+}
+
+table,
+th,
+td {
+	border: 1px solid #b6c0c8;
+}
+
+th,
+td {
+	padding: 12px;
+	text-align: left;
+}
+
+th {
+	background: #f7fafc;
+	color: #2c3e50;
+}
+
+button {
+	background: #2ecc71; /* Зеленый цвет для всех кнопок */
+	color: white;
+	border: none;
+	cursor: pointer;
+	padding: 8px;
+	border-radius: 6px;
+}
+
+button:hover {
+	background: #27ae60;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+ul li {
+	background: #f7fafc;
+	padding: 10px;
+	margin-bottom: 5px;
+	border-radius: 6px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid #b6c0c8;
+}
+
+ul li button {
+	background: #2ecc71; /* Зеленый цвет для всех кнопок */
+	padding: 6px 12px;
+	border-radius: 6px;
+}
+
+ul li button:hover {
+	background: #27ae60;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+	.admin-panel {
+		width: 95%; /* Увеличиваем ширину на мобильных устройствах */
+		padding: 15px;
+	}
+
+	.tabs {
+		flex-direction: column; /* Вкладки становятся вертикальными на маленьких экранах */
+	}
+
+	.tab-link {
+		padding: 10px;
+	}
+
+	form input {
+		width: calc(100% - 110px); /* Корректируем ширину для маленьких экранов */
+	}
+
+	form button {
+		width: 100%; /* Кнопка занимает всю ширину на мобильных устройствах */
+		margin-top: 10px; /* Добавляем отступ сверху */
+	}
+
+	table,
+	th,
+	td {
+		padding: 8px; /* Уменьшаем padding для удобства на маленьких экранах */
+	}
+
+	ul li {
+		flex-direction: column; /* Переносим кнопки под текст на маленьких экранах */
+		align-items: flex-start;
+	}
+
+	ul li button {
+		width: 100%; /* Кнопки занимают всю ширину */
+		margin-top: 5px;
+	}
+}
