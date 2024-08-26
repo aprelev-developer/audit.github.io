@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Прохождение аудита!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style/css/test/audit.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<div id="mySidebar" class="sidebar">
+    <div class="sidebar-header">
+        <h3>Таблицы</h3>
+        <button class="toggle-btn" onclick="toggleNav()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+    <h1>Общие показатели деятельности организации</h1>
+    <a href="#" onclick="showContent('section1')"><i class="fas fa-university"></i> <span>1.1 Общая информация об образовательной организации</span></a>
+    <a href="#" onclick="showContent('section2')"><i class="fas fa-users"></i> <span>1.2 Количество обучающихся</span></a>
+    <a href="#" onclick="showContent('section3')"><i class="fas fa-globe"></i> <span>1.3 Количество иностранных обучающихся</span></a>
+    <a href="#" onclick="showContent('section4')"><i class="fas fa-dollar-sign"></i> <span>1.4 Информация о поступлении и расходовании финансовых средств (за 2024 год)</span></a>
+    <a href="#" onclick="showContent('section5')"><i class="fas fa-address-book"></i> <span>1.5 Информация по приему на 2023/2024 уч.год</span></a>
+
+    <h1>Качество подготовки выпускников</h1>
+    <a href="#" onclick="showContent('section6')"><i class="fas fa-file-alt"></i> <span>2.1 Выполнение требований к структуре основной профессиональной образовательной программы</span></a>
+    <a href="#" onclick="showContent('section7')"><i class="fas fa-book-open"></i> <span>2.2 Соответствие объема и содержания подготовки требованиям единых образовательных стандартов среднего профессионального религиозного образования</span></a>
+    <a href="#" onclick="showContent('section8')"><i class="fas fa-chalkboard-teacher"></i> <span>2.3 Общая информация о научно-педагогических работниках</span></a>
+    <a href="#" onclick="showContent('section9')"><i class="fas fa-sitemap"></i> <span>2.4 Учебно-методическое обеспечение учебного процесса (организационная структура медресе)</span></a>
+    <a href="#" onclick="showContent('section10')"><i class="fas fa-star"></i> <span>2.5 Качество освоения основной образовательной программы</span></a>
+
+    <h1>Уровень востребованности выпускников</h1>
+    <a href="#" onclick="showContent('section11')"><i class="fas fa-user-graduate"></i> <span>3.1 Количество выпускников за последние 3 года</span></a>
+    <a href="#" onclick="showContent('section12')"><i class="fas fa-calendar-check"></i> <span>3.2 Планируемый выпуск в 2024 году</span></a>
+    <a href="#" onclick="showContent('section13')"><i class="fas fa-briefcase"></i> <span>3.3 Трудоустройство выпускников 2023 года</span></a>
+    <a href="#" onclick="showContent('section14')"><i class="fas fa-university"></i> <span>3.4 Информация о выпускниках, продолживших обучение в высших исламских учебных заведениях России (за последние 3 года)</span></a>
+
+    <h1></h1>
+    <a href="#" onclick="showContent('section15')"><i class="fas fa-building"></i> <span>4.1 Информация об используемых зданиях и помещениях</span></a>
+    <a href="#" onclick="showContent('section16')"><i class="fas fa-toolbox"></i> <span>4.2 Информация о наличии учебного оборудования</span></a>
+    <a href="#" onclick="showContent('section17')"><i class="fas fa-users-cog"></i> <span>4.3 Поддержка талантливой молодежи и внеучебная активность обучающихся (заполняется в свободной форме)</span></a>
+    <a href="#" onclick="showContent('section18')"><i class="fas fa-user-clock"></i> <span>4.4 Возрастной состав контингента обучающихся</span></a>
+</div>
+
+<div id="main">
+    <!-- 1.1 Общая информация об образовательной организации -->
+    <div id="section1" class="content-section active">
+        <h2>1.1 Общая информация об образовательной организации</h2>
+        <table>
+            <tr>
+                <th>Организационно-правовая форма</th>
+                <th>Учредители</th>
+                <th>Лицензия на ведение образовательной деятельности (№, кем и когда выдана)</th>
+                <th>Наличие государственной аккредитации (при наличии): (№, кем и когда выдана)</th>
+                <th>Наличие общественной аккредитации (при наличии): (№, кем и когда выдана)</th>
+                <th>Перечень реализуемых образовательных программ с указанием уровня образования и реализуемый формы обучения</th>
+            </tr>
+            <tr>
+                <td>Название организации</td>
+                <td><input type="text" placeholder="Введите название"></td>
+                <td><input type="text" placeholder="Введите данные лицензии"></td>
+                <td><input type="text" placeholder="Введите данные аккредитации"></td>
+                <td><input type="text" placeholder="Введите данные общественной аккредитации"></td>
+                <td><input type="text" placeholder="Введите перечень образовательных программ"></td>
+            </tr>
+            <tr>
+                <td>Адрес</td>
+                <td><input type="text" placeholder="Введите адрес"></td>
+                <td colspan="4"></td> <!-- Пустые ячейки для соответствия количеству столбцов -->
+            </tr>
+            <tr>
+                <td>Загрузить документ</td>
+                <td><input type="file"></td>
+                <td colspan="4"></td> <!-- Пустые ячейки для соответствия количеству столбцов -->
+            </tr>
+        </table>
+    </div>
+
+    <!-- 1.2 Количество обучающихся -->
+    <div id="section2" class="content-section">
+        <h2>1.2 Количество обучающихся</h2>
+        <table>
+            <tr>
+                <th>№ п/п</th>
+                <th>Наименование образовательной программы</th>
+                <th>Курс</th>
+                <th>Количество обучающихся</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><input type="text" placeholder="Введите название программы"></td>
+                <td><input type="number" placeholder="Введите курс"></td>
+                <td><input type="number" placeholder="Введите количество"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Мужчины</td>
+                <td></td>
+                <td><input type="number" placeholder="Введите количество"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Женщины</td>
+                <td></td>
+                <td><input type="number" placeholder="Введите количество"></td>
+            </tr>
+            <tr>
+                <td>Загрузить документ</td>
+                <td colspan="3"><input type="file"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 1.3 Количество иностранных обучающихся -->
+    <div id="section3" class="content-section">
+        <h2>1.3 Количество иностранных обучающихся</h2>
+        <table>
+            <tr>
+                <th>№ п/п</th>
+                <th>Наименование образовательной программы</th>
+                <th>Курс</th>
+                <th>Количество</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><input type="text" placeholder="Введите название программы"></td>
+                <td><input type="number" placeholder="Введите курс"></td>
+                <td><input type="number" placeholder="Введите количество"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Из СНГ</td>
+                <td></td>
+                <td><input type="number" placeholder="Введите количество"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Из других стран</td>
+                <td></td>
+                <td><input type="number" placeholder="Введите количество"></td>
+            </tr>
+            <tr>
+                <td>Загрузить документ</td>
+                <td colspan="3"><input type="file"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 1.4 Информация о поступлении и расходовании финансовых средств -->
+    <div id="section4" class="content-section">
+        <h2>1.4 Информация о поступлении и расходовании финансовых средств (за 2024 год)</h2>
+        <table>
+            <tr>
+                <th>1. Поступление денежных средств</th>
+                <th>Сумма (руб.)</th>
+            </tr>
+            <tr>
+                <td>Поступление средств</td>
+                <td><input type="number" placeholder="Введите сумму"></td>
+            </tr>
+            <tr>
+                <th>2. Расходование денежных средств</th>
+                <th>Сумма (руб.)</th>
+            </tr>
+            <tr>
+                <td>Расходование средств</td>
+                <td><input type="number" placeholder="Введите сумму"></td>
+            </tr>
+            <tr>
+                <td>Загрузить отчет</td>
+                <td><input type="file"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 1.5 Информация по приему на 2023/2024 уч.год -->
+    <div id="section5" class="content-section">
+        <h2>1.5 Информация по приему на 2023/2024 уч.год</h2>
+        <table>
+            <tr>
+                <th>№ п/п</th>
+                <th>Направление подготовки</th>
+                <th>Общее количество</th>
+                <th>Заочная форма</th>
+                <th>Очная форма</th>
+                <th>Очно-заочная форма</th>
+                <th>Количество иностранных граждан</th>
+                <th>Принято абитуриентов по целевому набору</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><input type="text" placeholder="Введите направление подготовки"></td>
+                <td><input type="number" placeholder="Введите количество"></td>
+                <td><input type="number" placeholder="Введите количество"></td>
+                <td><input type="number" placeholder="Введите количество"></td>
+                <td><input type="number" placeholder="Введите количество"></td>
+                <td><input type="number" placeholder="Введите количество"></td>
+                <td><input type="number" placeholder="Введите количество"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Мужчины</td>
+                <td></td>
+                <td><input type="number" placeholder="Введите количество"></td>
+                <td></td>
+                <td></td>
+                <td><input type="number" placeholder="Введите количество"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Женщины</td>
+                <td></td>
+                <td><input type="number" placeholder="Введите количество"></td>
+                <td></td>
+                <td></td>
+                <td><input type="number" placeholder="Введите количество"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Загрузить документ</td>
+                <td colspan="7"><input type="file"></td>
+            </tr>
+        </table>
+    </div>
+
+
+    <!-- 2.1 Выполнение требований к структуре основной профессиональной образовательной программы -->
+    <div id="section6" class="content-section">
+        <h2>2.1 Выполнение требований к структуре основной профессиональной образовательной программы</h2>
+        <table>
+            <tr>
+                <th>№</th>
+                <th>Показатели</th>
+                <th>Выполнение показателя (да/нет)</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Наименование программы</td>
+                <td><input type="text" placeholder="Введите наименование"></td>
+            </tr>
+            <tr>
+                <td>Загрузить документ</td>
+                <td colspan="2"><input type="file"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 2.2 Соответствие объема и содержания подготовки требованиям единых образовательных стандартов -->
+    <div id="section7" class="content-section">
+        <h2>2.2 Соответствие объема и содержания подготовки требованиям единых образовательных стандартов среднего профессионального религиозного образования</h2>
+        <table>
+            <tr>
+                <th>№</th>
+                <th>Показатели</th>
+                <th>да/нет</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Соответствие содержания</td>
+                <td><input type="text" placeholder="Введите информацию"></td>
+            </tr>
+            <tr>
+                <td>Загрузить отчет</td>
+                <td colspan="2"><input type="file"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 2.3 Общая информация о научно-педагогических работниках -->
+    <div id="section8" class="content-section">
+        <h2>2.3 Общая информация о научно-педагогических работниках</h2>
+        <table>
+            <tr>
+                <th>№</th>
+                <th>ФИО</th>
+                <th>Должность</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><input type="text" placeholder="Введите ФИО"></td>
+                <td><input type="text" placeholder="Введите должность"></td>
+            </tr>
+            <tr>
+                <td>Загрузить документ</td>
+                <td colspan="2"><input type="file"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 2.4 Учебно-методическое обеспечение учебного процесса (организационная структура медресе) -->
+    <div id="section9" class="content-section">
+        <h2>2.4 Учебно-методическое обеспечение учебного процесса (организационная структура медресе)</h2>
+        <table>
+            <tr>
+                <th>№</th>
+                <th>ФИО участвующего в тестировании</th>
+                <th>Результат тестирования по дисциплине "Исламское вероучение"</th>
+                <th>Результат тестирования по дисциплине "Основы поклонения(ибадат)"</th>
+                <th>Результат тестирования по дисциплине История пророков и жизнеописание пророка</th>
+                <th>Результат тестирования по дисциплине Арабский язык</th>
+                <th>Результат тестирования по дисциплине Изречения пророка Мухаммада</th>
+                <th>Результат диагностической работы по оценке сформированности гражданских компетенций</th>
+                <th>Общий балл</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><input type="text" placeholder="Введите ФИО"></td>
+                <td><input type="number" placeholder="Введите результат"></td>
+                <td><input type="number" placeholder="Введите результат"></td>
+                <td><input type="number" placeholder="Введите результат"></td>
+                <td><input type="number" placeholder="Введите результат"></td>
+                <td><input type="number" placeholder="Введите результат"></td>
+                <td><input type="number" placeholder="Введите результат"></td>
+                <td><input type="number" placeholder="Введите общий балл"></td>
+            </tr>
+            <tr>
+                <td>Загрузить документ</td>
+                <td colspan="8"><input type="file"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 2.5 Качество освоения основной образовательной программы -->
+    <div id="section10" class="content-section">
+        <h2>2.5 Качество освоения основной образовательной программы</h2>
+        <table>
+            <tr>
+                <th>№ п/п</th>
+                <th>Год выпуска</th>
+                <th>Общее количество</th>
+                <th>Заочная форма</th>
+                <th>Очная форма</th>
+                <th>Очно-заочная форма</th>
+                <th>Иностранные граждане</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><input type="number" placeholder="Введите год выпуска"></td>
+                <td><input type="number" placeholder="Введите количество"></td>
+                <td><input type="number" placeholder="Введите количество"></td>
+                <td><input type="number" placeholder="Введите количество"></td>
+                <td><input type="number" placeholder="Введите количество"></td>
+                <td><input type="number" placeholder="Введите количество"></td>
+            </tr>
+            <tr>
+                <td>Загрузить отчет</td>
+                <td colspan="6"><input type="file"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 3.1 Количество выпускников за последние 3 года -->
+    <div id="section11" class="content-section">
+        <h2>3.1 Количество выпускников за последние 3 года</h2>
+        <table>
+            <tr>
+                <th>№</th>
+                <th>Направление подготовки</th>
+                <th>Трудоустроено в религиозные организации</th>
+                <th>Трудоустроены в учебные заведения</th>
+                <th>Продолжили обучение по программам подготовки служителей и религиозного персонала</th>
+                <th>Продолжили обучение по направлению "теология"</th>
+                <th>Не трудоустроены</th>
+            </tr>
+            <tr>
+                <td>Год выпуска</td>
+                <td><input type="number" placeholder="Введите год"></td>
+                <td colspan="5"></td>
+            </tr>
+            <tr>
+                <td>Количество выпускников</td>
+                <td><input type="number" placeholder="Введите количество"></td>
+                <td colspan="5"></td>
+            </tr>
+            <tr>
+                <td>Загрузить отчет</td>
+                <td><input type="file"></td>
+                <td colspan="5"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 3.2 Планируемый выпуск в 2024 году -->
+    <div id="section12" class="content-section">
+        <h2>3.2 Планируемый выпуск в 2024 году</h2>
+        <table>
+            <tr>
+                <th>№</th>
+                <th>ФИО выпускника</th>
+                <th>Год выпуска</th>
+                <th>Высшее учебное заведение, в которое поступил выпускник медресе</th>
+                <th>Наличие договора о сотрудничестве с данным учебным заведением (при наличии указать его реквизиты)</th>
+            </tr>
+            <tr>
+                <td>Планируемое количество</td>
+                <td><input type="number" placeholder="Введите количество"></td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>Загрузить документ</td>
+                <td><input type="file"></td>
+                <td colspan="3"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 3.3 Трудоустройство выпускников 2023 года -->
+    <div id="section13" class="content-section">
+        <h2>3.3 Трудоустройство выпускников 2023 года</h2>
+        <table>
+            <tr>
+                <th>№</th>
+                <th>Адрес расположения здания</th>
+                <th>Форма пользования (аренда, собственность, оперативное управление, собственность учредителя и т.д.)</th>
+                <th>Общая площадь здания</th>
+                <th>Количество и общая площадь учебных помещений</th>
+            </tr>
+            <tr>
+                <td>Количество трудоустроенных</td>
+                <td><input type="number" placeholder="Введите количество"></td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>Место работы</td>
+                <td><input type="text" placeholder="Введите место работы"></td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>Загрузить отчет</td>
+                <td><input type="file"></td>
+                <td colspan="3"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 3.4 Информация о выпускниках, продолживших обучение -->
+    <div id="section14" class="content-section">
+        <h2>3.4 Информация о выпускниках, продолживших обучение в высших исламских учебных заведениях России (за последние 3 года)</h2>
+        <table>
+            <tr>
+                <th>№</th>
+                <th>Показатели</th>
+                <th>да/нет</th>
+            </tr>
+            <tr>
+                <td>Год выпуска</td>
+                <td><input type="number" placeholder="Введите год"></td>
+                <td colspan="1"></td>
+            </tr>
+            <tr>
+                <td>Количество продолживших обучение</td>
+                <td><input type="number" placeholder="Введите количество"></td>
+                <td colspan="1"></td>
+            </tr>
+            <tr>
+                <td>Учебное заведение</td>
+                <td><input type="text" placeholder="Введите наименование"></td>
+                <td colspan="1"></td>
+            </tr>
+            <tr>
+                <td>Загрузить документ</td>
+                <td><input type="file"></td>
+                <td colspan="1"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 4.1 Информация об используемых зданиях и помещениях -->
+    <div id="section15" class="content-section">
+        <h2>4.1 Информация об используемых зданиях и помещениях</h2>
+        <table>
+            <tr>
+                <th>Поле</th>
+                <th>Значение</th>
+            </tr>
+            <tr>
+                <td>Наименование здания</td>
+                <td><input type="text" placeholder="Введите наименование"></td>
+            </tr>
+            <tr>
+                <td>Адрес</td>
+                <td><input type="text" placeholder="Введите адрес"></td>
+            </tr>
+            <tr>
+                <td>Загрузить документ</td>
+                <td><input type="file"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 4.2 Информация о наличии учебного оборудования -->
+    <div id="section16" class="content-section">
+        <h2>4.2 Информация о наличии учебного оборудования</h2>
+        <table>
+            <tr>
+                <th>Поле</th>
+                <th>Значение</th>
+            </tr>
+            <tr>
+                <td>Наименование оборудования</td>
+                <td><input type="text" placeholder="Введите наименование"></td>
+            </tr>
+            <tr>
+                <td>Количество</td>
+                <td><input type="number" placeholder="Введите количество"></td>
+            </tr>
+            <tr>
+                <td>Загрузить документ</td>
+                <td><input type="file"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 4.3 Поддержка талантливой молодежи и внеучебная активность обучающихся -->
+    <div id="section17" class="content-section">
+        <h2>4.3 Поддержка талантливой молодежи и внеучебная активность обучающихся (заполняется в свободной форме)</h2>
+        <textarea placeholder="Введите информацию"></textarea>
+    </div>
+
+    <!-- 4.4 Возрастной состав контингента обучающихся -->
+    <div id="section18" class="content-section">
+        <h2>4.4 Возрастной состав контингента обучающихся</h2>
+        <table>
+            <tr>
+                <th>Поле</th>
+                <th>Значение</th>
+            </tr>
+            <tr>
+                <td>Возрастная группа</td>
+                <td><input type="text" placeholder="Введите возрастную группу"></td>
+            </tr>
+            <tr>
+                <td>Количество обучающихся</td>
+                <td><input type="number" placeholder="Введите количество"></td>
+            </tr>
+        </table>
+    </div>
+    <button type = "button" class="btn-upload"><a href="../client/user_profile/user_profile.html">Отправить данные</a></button>
+</div>
+<script src="../../style/js/test/audit.js"></script>
+</body>
+</html>

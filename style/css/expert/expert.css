@@ -1,0 +1,134 @@
+/* styles.css */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f4;
+	color: #333;
+}
+
+header {
+	background-color: #009688;
+	color: white;
+	padding: 1rem;
+	text-align: center;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: #333;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+}
+
+nav ul li {
+	margin: 0 10px;
+}
+
+nav ul li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 20px;
+	text-decoration: none;
+	background-color: #333;
+	border-radius: 4px;
+	transition: background-color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+	background-color: #00695c;
+}
+
+main {
+	padding: 1rem;
+	margin-top: 10px;
+	min-height: 60vh;
+}
+
+section {
+	display: none;
+}
+
+#profile:target,
+#organizations:target,
+#audit:target,
+#form-details:target {
+	display: block;
+}
+
+.profile, .organization, .audit, #form-details {
+	background: white;
+	padding: 1rem;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 10px;
+}
+
+table, th, td {
+	border: 1px solid #ddd;
+}
+
+th, td {
+	padding: 10px;
+	text-align: left;
+}
+
+th {
+	background-color: #009688;
+	color: white;
+}
+
+.status-input {
+	width: 60px;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+#submit-status,
+#add-form-btn,
+.delete-form-btn,
+#save-form-details,
+#back-to-audit {
+	margin-top: 10px;
+	padding: 10px 15px;
+	background-color: #009688;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+#submit-status:hover,
+#add-form-btn:hover,
+.delete-form-btn:hover,
+#save-form-details:hover,
+#back-to-audit:hover {
+	background-color: #00695c;
+}
+
+label {
+	display: block;
+	margin-top: 10px;
+}
+
+input[type="text"] {
+	width: 100%;
+	padding: 8px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}

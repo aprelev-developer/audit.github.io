@@ -1,0 +1,184 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	background: #f0f4f5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+}
+
+.user-profile {
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, .15), 0 10px 10px rgba(0, 0, 0, .12);
+	width: 400px;
+	max-width: 100%;
+	padding: 30px;
+	text-align: center;
+}
+
+.user-profile h2 {
+	font-size: 24px;
+	color: #2e4a62;
+	margin-bottom: 10px;
+}
+
+.user-profile p {
+	font-size: 14px;
+	color: #4a6675;
+	margin: 5px 0;
+}
+
+.user-data {
+	background: #f0f4f5;
+	border-radius: 8px;
+	padding: 15px;
+	margin: 20px 0;
+}
+
+.user-data div {
+	margin: 10px 0;
+}
+
+.user-data label {
+	font-size: 14px;
+	color: #2e4a62;
+	font-weight: bold;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.user-data span {
+	font-size: 14px;
+	color: #4a6675;
+}
+
+.test-status {
+	background: #e5e7e9;
+	border-radius: 8px;
+	padding: 15px;
+	margin: 20px 0;
+	text-align: center;
+}
+
+.test-status h3 {
+	font-size: 18px;
+	color: #2e4a62;
+	margin-bottom: 10px;
+}
+
+button {
+	border-radius: 20px;
+	border: 1px solid #4a9177;
+	background: #4a9177;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 10px 20px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+	cursor: pointer;
+}
+
+button:active {
+	transform: scale(.95);
+}
+
+button:focus {
+	outline: none;
+}
+
+/* Анимация выдвижения списка тестов */
+.test-list {
+	max-height: 0;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	margin-top: 15px;
+	transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+.test-item {
+	background: #f0f4f5;
+	border-radius: 8px;
+	padding: 10px;
+	margin-bottom: 10px;
+	text-align: left;
+}
+
+.test-item h4 {
+	font-size: 16px;
+	color: #2e4a62;
+	margin-bottom: 5px;
+}
+
+.test-item p {
+	font-size: 14px;
+	color: #4a6675;
+}
+
+.test-item a {
+	color: #4a9177;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.test-item a:hover {
+	text-decoration: underline;
+}
+
+/* Стили для модального окна */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 100;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-content {
+	background-color: #fff;
+	margin: 15% auto;
+	padding: 20px;
+	border-radius: 10px;
+	width: 80%;
+	max-width: 400px;
+}
+
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-content label {
+	display: block;
+	margin-top: 10px;
+	color: #2e4a62;
+	font-weight: bold;
+}
+
+.modal-content input,
+.modal-content select {
+	width: 100%;
+	padding: 8px;
+	margin-top: 5px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
